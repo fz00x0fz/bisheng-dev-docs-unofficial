@@ -1,0 +1,486 @@
+<!DOCTYPE html><html><head>
+      <title>system_architecture_diagrams</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\befree\.windsurf\extensions\shd101wyy.markdown-preview-enhanced-0.8.20-universal\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      <script type="text/javascript" src="file:///c:\Users\befree\.windsurf\extensions\shd101wyy.markdown-preview-enhanced-0.8.20-universal\crossnote\dependencies\mermaid\mermaid.min.js" charset="UTF-8"></script>
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="bisheng-系统架构图">Bisheng 系统架构图 </h1>
+<p>本文档包含 Bisheng 平台的完整系统架构图、模块关系图和数据流图。</p>
+<h2 id="1-整体系统架构图">1. 整体系统架构图 </h2>
+<div class="mermaid">graph TB
+    subgraph "客户端层 Client Layer"
+        WEB[Web Browser&lt;br/&gt;React + TypeScript]
+        API_CLIENT[API Client&lt;br/&gt;REST/WebSocket]
+    end
+
+    subgraph "接入层 Gateway Layer"
+        NGINX[Nginx&lt;br/&gt;反向代理/负载均衡]
+        WS_GATEWAY[WebSocket Gateway]
+    end
+
+    subgraph "应用层 Application Layer"
+        subgraph "API Services"
+            USER_API[用户管理 API]
+            FLOW_API[技能/工作流 API]
+            KNOWLEDGE_API[知识库 API]
+            CHAT_API[聊天 API]
+            LLM_API[LLM API]
+            LINSIGHT_API[Linsight API]
+            ASSISTANT_API[助手 API]
+        end
+        
+        subgraph "Core Services"
+            AUTH_SVC[认证服务&lt;br/&gt;JWT Auth]
+            WORKFLOW_ENGINE[工作流引擎]
+            CHAT_MANAGER[聊天管理器]
+            RAG_SERVICE[RAG服务]
+            LINSIGHT_ENGINE[Linsight引擎]
+        end
+    end
+
+    subgraph "业务逻辑层 Business Layer"
+        USER_SVC[用户服务]
+        FLOW_SVC[流程服务]
+        KNOWLEDGE_SVC[知识库服务]
+        LLM_SVC[LLM服务]
+        TASK_SVC[任务服务]
+    end
+
+    subgraph "数据访问层 Data Access Layer"
+        DAO[DAO Layer&lt;br/&gt;SQLModel/SQLAlchemy]
+        CACHE[缓存层&lt;br/&gt;Redis Client]
+        VECTOR_CLIENT[向量库客户端]
+        STORAGE_CLIENT[对象存储客户端]
+    end
+
+    subgraph "基础设施层 Infrastructure Layer"
+        MYSQL[(MySQL&lt;br/&gt;关系数据库)]
+        REDIS[(Redis&lt;br/&gt;缓存/消息队列)]
+        MILVUS[(Milvus&lt;br/&gt;向量数据库)]
+        ES[(Elasticsearch&lt;br/&gt;全文搜索)]
+        MINIO[(MinIO&lt;br/&gt;对象存储)]
+        CELERY[Celery&lt;br/&gt;异步任务队列]
+    end
+
+    subgraph "外部服务 External Services"
+        OPENAI[OpenAI API]
+        ANTHROPIC[Anthropic API]
+        QWEN[通义千问 API]
+        ZHIPU[智谱 API]
+        OTHER_LLM[其他LLM服务]
+    end
+
+    WEB --&gt; NGINX
+    API_CLIENT --&gt; NGINX
+    NGINX --&gt; USER_API
+    NGINX --&gt; FLOW_API
+    NGINX --&gt; KNOWLEDGE_API
+    NGINX --&gt; CHAT_API
+    NGINX --&gt; LLM_API
+    NGINX --&gt; LINSIGHT_API
+    NGINX --&gt; ASSISTANT_API
+    WS_GATEWAY --&gt; CHAT_MANAGER
+
+    USER_API --&gt; AUTH_SVC
+    USER_API --&gt; USER_SVC
+    FLOW_API --&gt; WORKFLOW_ENGINE
+    FLOW_API --&gt; FLOW_SVC
+    KNOWLEDGE_API --&gt; RAG_SERVICE
+    KNOWLEDGE_API --&gt; KNOWLEDGE_SVC
+    CHAT_API --&gt; CHAT_MANAGER
+    LLM_API --&gt; LLM_SVC
+    LINSIGHT_API --&gt; LINSIGHT_ENGINE
+    ASSISTANT_API --&gt; WORKFLOW_ENGINE
+
+    USER_SVC --&gt; DAO
+    FLOW_SVC --&gt; DAO
+    KNOWLEDGE_SVC --&gt; DAO
+    KNOWLEDGE_SVC --&gt; VECTOR_CLIENT
+    KNOWLEDGE_SVC --&gt; STORAGE_CLIENT
+    LLM_SVC --&gt; CACHE
+    TASK_SVC --&gt; CELERY
+
+    DAO --&gt; MYSQL
+    CACHE --&gt; REDIS
+    VECTOR_CLIENT --&gt; MILVUS
+    VECTOR_CLIENT --&gt; ES
+    STORAGE_CLIENT --&gt; MINIO
+
+    LLM_SVC --&gt; OPENAI
+    LLM_SVC --&gt; ANTHROPIC
+    LLM_SVC --&gt; QWEN
+    LLM_SVC --&gt; ZHIPU
+    LLM_SVC --&gt; OTHER_LLM
+</div><h2 id="2-模块依赖关系图">2. 模块依赖关系图 </h2>
+<div class="mermaid">graph LR
+    subgraph "核心模块"
+        USER[用户管理]
+        WORKFLOW[工作流引擎]
+        KNOWLEDGE[知识库]
+        CHAT[聊天模块]
+        LLM[LLM集成]
+        LINSIGHT[Linsight]
+        ASSISTANT[助手模块]
+    end
+
+    subgraph "基础模块"
+        AUTH[认证授权]
+        CONFIG[配置管理]
+        CACHE[缓存服务]
+        STORAGE[存储服务]
+        QUEUE[任务队列]
+    end
+
+    subgraph "扩展模块"
+        LANGCHAIN[LangChain扩展]
+        FINETUNE[模型微调]
+        EVALUATION[评估模块]
+        SHARE[分享链接]
+    end
+
+    USER --&gt; AUTH
+    WORKFLOW --&gt; USER
+    WORKFLOW --&gt; LLM
+    WORKFLOW --&gt; KNOWLEDGE
+    KNOWLEDGE --&gt; STORAGE
+    KNOWLEDGE --&gt; LLM
+    CHAT --&gt; USER
+    CHAT --&gt; WORKFLOW
+    CHAT --&gt; ASSISTANT
+    LLM --&gt; CONFIG
+    LLM --&gt; CACHE
+    LINSIGHT --&gt; LLM
+    LINSIGHT --&gt; WORKFLOW
+    LINSIGHT --&gt; LANGCHAIN
+    ASSISTANT --&gt; WORKFLOW
+    ASSISTANT --&gt; LLM
+    ASSISTANT --&gt; KNOWLEDGE
+
+    LANGCHAIN --&gt; LLM
+    FINETUNE --&gt; LLM
+    EVALUATION --&gt; WORKFLOW
+    SHARE --&gt; WORKFLOW
+</div><h2 id="3-技术栈全景图">3. 技术栈全景图 </h2>
+<div class="mermaid">mindmap
+    root((Bisheng Platform))
+        Frontend
+            React 18
+            TypeScript
+            TailwindCSS
+            ReactFlow
+            WebSocket Client
+            Axios
+        Backend
+            FastAPI
+            Python 3.10+
+            SQLModel
+            Pydantic
+            Celery
+            WebSocket
+        Database
+            MySQL 8.0
+            Redis 7.0
+            Milvus 2.5
+            Elasticsearch 8.12
+        Storage
+            MinIO
+            Local FileSystem
+        LLM Integration
+            OpenAI
+            Anthropic
+            Qwen
+            Zhipu
+            Wenxin
+            XunFei
+        DevOps
+            Docker
+            Docker Compose
+            Nginx
+            Prometheus
+            Grafana
+</div><h2 id="4-部署架构图">4. 部署架构图 </h2>
+<div class="mermaid">graph TB
+    subgraph "负载均衡层"
+        LB[Nginx Load Balancer&lt;br/&gt;:80/:443]
+    end
+
+    subgraph "应用服务层"
+        subgraph "Backend Cluster"
+            BE1[Backend Node 1&lt;br/&gt;:7860]
+            BE2[Backend Node 2&lt;br/&gt;:7860]
+            BE3[Backend Node N&lt;br/&gt;:7860]
+        end
+        
+        subgraph "Frontend Cluster"
+            FE1[Frontend Node 1&lt;br/&gt;:3001]
+            FE2[Frontend Node 2&lt;br/&gt;:3001]
+        end
+
+        subgraph "Worker Cluster"
+            W1[Celery Worker 1]
+            W2[Celery Worker 2]
+            W3[Celery Worker N]
+        end
+    end
+
+    subgraph "数据存储层"
+        subgraph "Primary Storage"
+            MYSQL_M[(MySQL Master)]
+            MYSQL_S[(MySQL Slave)]
+        end
+        
+        subgraph "Cache Layer"
+            REDIS_M[(Redis Master)]
+            REDIS_S[(Redis Slave)]
+        end
+
+        subgraph "Vector Storage"
+            MILVUS[(Milvus Cluster)]
+            ES[(ES Cluster)]
+        end
+
+        subgraph "Object Storage"
+            MINIO[(MinIO Cluster)]
+        end
+    end
+
+    LB --&gt; BE1
+    LB --&gt; BE2
+    LB --&gt; BE3
+    LB --&gt; FE1
+    LB --&gt; FE2
+
+    BE1 --&gt; MYSQL_M
+    BE2 --&gt; MYSQL_M
+    BE3 --&gt; MYSQL_M
+    MYSQL_M --&gt; MYSQL_S
+
+    BE1 --&gt; REDIS_M
+    BE2 --&gt; REDIS_M
+    BE3 --&gt; REDIS_M
+    REDIS_M --&gt; REDIS_S
+
+    BE1 --&gt; MILVUS
+    BE2 --&gt; MILVUS
+    BE3 --&gt; MILVUS
+
+    BE1 --&gt; ES
+    BE2 --&gt; ES
+    BE3 --&gt; ES
+
+    BE1 --&gt; MINIO
+    BE2 --&gt; MINIO
+    BE3 --&gt; MINIO
+
+    W1 --&gt; REDIS_M
+    W2 --&gt; REDIS_M
+    W3 --&gt; REDIS_M
+    W1 --&gt; MYSQL_M
+    W2 --&gt; MYSQL_M
+    W3 --&gt; MYSQL_M
+</div><h2 id="5-数据流向图">5. 数据流向图 </h2>
+<div class="mermaid">flowchart LR
+    subgraph "用户交互"
+        USER((用户))
+    end
+
+    subgraph "前端应用"
+        UI[Web UI]
+    end
+
+    subgraph "API网关"
+        GW[API Gateway]
+    end
+
+    subgraph "核心服务"
+        AUTH[认证服务]
+        BIZ[业务服务]
+        ASYNC[异步服务]
+    end
+
+    subgraph "数据层"
+        DB[(数据库)]
+        CACHE[(缓存)]
+        QUEUE[(消息队列)]
+        VECTOR[(向量库)]
+        FILE[(文件存储)]
+    end
+
+    subgraph "外部服务"
+        LLM[LLM服务]
+    end
+
+    USER --&gt;|HTTP/WS| UI
+    UI --&gt;|REST API| GW
+    GW --&gt;|JWT验证| AUTH
+    AUTH --&gt;|Token| GW
+    GW --&gt;|业务请求| BIZ
+    BIZ --&gt;|读写| DB
+    BIZ --&gt;|缓存| CACHE
+    BIZ --&gt;|异步任务| QUEUE
+    QUEUE --&gt;|消费| ASYNC
+    ASYNC --&gt;|处理| DB
+    BIZ --&gt;|向量检索| VECTOR
+    BIZ --&gt;|文件操作| FILE
+    BIZ --&gt;|模型调用| LLM
+    LLM --&gt;|响应| BIZ
+    BIZ --&gt;|响应| GW
+    GW --&gt;|响应| UI
+    UI --&gt;|展示| USER
+</div><h2 id="6-代码目录结构脑图">6. 代码目录结构脑图 </h2>
+<div class="mermaid">mindmap
+    root((bisheng))
+        src
+            backend
+                bisheng
+                    api
+                        v1
+                        services
+                    chat
+                    chat_session
+                    database
+                        models
+                    knowledge
+                        api
+                        domain
+                        rag
+                    linsight
+                    llm
+                    workflow
+                        nodes
+                        graph
+                        edges
+                    finetune
+                    common
+                    utils
+                bisheng_langchain
+                    chat_models
+                    embeddings
+                    document_loaders
+                    gpts
+                    linsight
+                    agents
+                fastapi_jwt_auth
+            frontend
+                client
+                    src
+                        components
+                        hooks
+                        pages
+                        store
+                        api
+                        utils
+        docker
+            docker-compose.yml
+            config
+        docs
+</div><h2 id="7-安全架构图">7. 安全架构图 </h2>
+<div class="mermaid">graph TB
+    subgraph "安全边界"
+        subgraph "网络安全层"
+            FW[防火墙]
+            WAF[Web应用防火墙]
+            SSL[SSL/TLS加密]
+        end
+
+        subgraph "认证授权层"
+            JWT[JWT Token]
+            RBAC[RBAC权限控制]
+            CAPTCHA[验证码]
+        end
+
+        subgraph "数据安全层"
+            ENCRYPT[数据加密]
+            MASK[数据脱敏]
+            AUDIT[审计日志]
+        end
+
+        subgraph "应用安全层"
+            INPUT[输入验证]
+            XSS[XSS防护]
+            CSRF[CSRF防护]
+            INJECTION[注入防护]
+        end
+    end
+
+    CLIENT[客户端] --&gt; FW
+    FW --&gt; WAF
+    WAF --&gt; SSL
+    SSL --&gt; JWT
+    JWT --&gt; RBAC
+    RBAC --&gt; INPUT
+    INPUT --&gt; XSS
+    XSS --&gt; CSRF
+    CSRF --&gt; INJECTION
+    INJECTION --&gt; ENCRYPT
+    ENCRYPT --&gt; MASK
+    MASK --&gt; AUDIT
+    AUDIT --&gt; DB[(数据库)]
+</div>
+      </div>
+      
+      
+    
+    
+    <script type="module">
+// TODO: If ZenUML gets integrated into mermaid in the future,
+//      we can remove the following lines.
+
+
+var MERMAID_CONFIG = ({"startOnLoad":false});
+if (typeof MERMAID_CONFIG !== 'undefined') {
+  MERMAID_CONFIG.startOnLoad = false
+  MERMAID_CONFIG.cloneCssStyles = false
+  MERMAID_CONFIG.theme = "default"
+}
+
+mermaid.initialize(MERMAID_CONFIG || {})
+if (typeof(window['Reveal']) !== 'undefined') {
+  function mermaidRevealHelper(event) {
+    var currentSlide = event.currentSlide
+    var diagrams = currentSlide.querySelectorAll('.mermaid')
+    for (var i = 0; i < diagrams.length; i++) {
+      var diagram = diagrams[i]
+      if (!diagram.hasAttribute('data-processed')) {
+        mermaid.init(null, diagram, ()=> {
+          Reveal.slide(event.indexh, event.indexv)
+        })
+      }
+    }
+  }
+  Reveal.addEventListener('slidetransitionend', mermaidRevealHelper)
+  Reveal.addEventListener('ready', mermaidRevealHelper)
+  await mermaid.run({
+    nodes: document.querySelectorAll('.mermaid')
+  })
+} else {
+  await mermaid.run({
+    nodes: document.querySelectorAll('.mermaid')
+  })
+}
+</script>
+    
+    
+    
+  
+    </body></html>
