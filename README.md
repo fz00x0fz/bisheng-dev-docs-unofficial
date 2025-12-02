@@ -166,6 +166,10 @@ bisheng-dev-docs/
 
 如果您发现文档中的错误或有改进建议，欢迎提交 Issue 或 Pull Request。
 
-## 版权信息
+## 许可证
 
-Bisheng 是开源项目，遵循相应的开源许可证。
+本文档遵循 [Apache-2.0 License](LICENSE)，与 BISHENG 官方项目保持一致。
+
+- **官方项目许可证：** [Apache-2.0](https://github.com/dataelement/bisheng/blob/main/LICENSE)
+- 本文档的所有内容均基于 Apache-2.0 许可证发布
+- 您可以自由使用、修改和分发本文档，但需遵守许可证条款
